@@ -3,12 +3,22 @@
 #punto con ascissa massima e il punto con ordinata minima.
 
 import random
+
 x=[]
 y=[]
 for i in range(0,20):
     x.append(random.randint(0,10))
     y.append(random.randint(0,10))
     
+#ascissa massima ?
+#scorrere la lista delle x, trovare il massimo e salvare l'indice
+#visualizzare poi con un print il numero
+massimo=x[0]
+
+for i in range(0,20):
+    if x[i]>massimo:
+        massimo=x[i]
+print(massimo,y[massimo])    
 
 punti_cartesiano=[]
 for i in range(0,20):
@@ -19,3 +29,4 @@ for i in range(0,20):
 print(punti_cartesiano[0][0])
 #come accedere alla y del primo punto
 print(punti_cartesiano[0][1])
+
