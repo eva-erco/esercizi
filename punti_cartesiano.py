@@ -20,6 +20,16 @@ for i in range(0,20):
         massimo=x[i]
 print(massimo,y[massimo])    
 
+#ordinata minima ?
+#scorrere la lista delle y, trovare il minimo e salvare l'indice
+#visualizzare poi con un print il numero
+minimo=y[0]
+
+for i in range(0,20):
+    if y[i]<minimo:
+        minimo=y[i]
+print(minimo,x[minimo])
+
 punti_cartesiano=[]
 for i in range(0,20):
     punto=(random.randint(0,10),random.randint(0,10))
