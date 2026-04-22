@@ -25,8 +25,7 @@ def calcola_varianza(media,lista):
     questa funzione calcola la varianza di un distribuzione numerica
     
     :pares liste: liste una per giorno contenenti le misurazioni
-    
-    """
+     """
     calcolo = 0
     varianza = 0
     for i in range(0, len(lista)):
@@ -108,3 +107,20 @@ def crea_istogramma(dati, num_bins=10, titolo="Istogramma", colore="skyblue"):
     plt.ylabel("Frequenza")
     plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.show()
+    
+def covarianza(lista1, lista2):
+    calcolo=0
+    media1 = sum(lista1) / len(lista1)
+    media2 = sum(lista2) / len(lista2)
+    for i in range(len(lista1)):
+        calcolo = calcolo + (lista1[i] - media1) * (lista2[i] - media2)
+    calcolo = calcolo / len(lista1)
+    return calcolo
+        
+def correlazione(lista1, lista2):
+    cov = covarianza(lista1, lista2)
+    
+    dev1 = deviazione_standard(calcola_varianza(calcola_media(lista1), lista1))
+    dev2 = deviazione_standard(calcola_varianza(calcola_media(lista2), lista2))
+    cor = cov / (dev1 * dev2) 
+    return cor
