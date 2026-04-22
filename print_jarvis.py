@@ -64,3 +64,75 @@ if __name__=="__main__":
     
     giorni = [lunedi, martedi, mercoledi, giovedi, venerdi, sabato, domenica]
     medie_sett = media_settimanale(giorni)
+    
+    crea_istogramma(lunedi)
+    crea_istogramma(martedi)
+    crea_istogramma(mercoledi)
+    crea_istogramma(giovedi)
+    crea_istogramma(venerdi)
+    crea_istogramma(sabato)
+    crea_istogramma(domenica)
+    
+    covLunMar=covarianza(lunedi,martedi) 
+    covLunMer=covarianza(lunedi,mercoledi)
+    covLunGio=covarianza(lunedi,giovedi)
+    covLunVen=covarianza(lunedi,venerdi)
+    covLunSab=covarianza(lunedi,sabato)
+    covLunDom=covarianza(lunedi,domenica)
+
+    covMarMer=covarianza(martedi,mercoledi)
+    covMarGio=covarianza(martedi,giovedi)
+    covMarVen=covarianza(martedi,venerdi)
+    covMarSab=covarianza(martedi,sabato)
+    covMarDom=covarianza(martedi,domenica)
+
+    covMerGio=covarianza(mercoledi,giovedi)
+    covMerVen=covarianza(mercoledi,venerdi)
+    covMerSab=covarianza(mercoledi,sabato)
+    covMerDom=covarianza(mercoledi,domenica)
+
+    covGioVen=covarianza(giovedi,venerdi)
+    covGioSab=covarianza(giovedi,sabato)
+    covGioDom=covarianza(giovedi,domenica)
+
+    covVenSab=covarianza(venerdi,sabato)
+    covVenDom=covarianza(venerdi,domenica)
+
+    covSabDom=covarianza(sabato,domenica)
+
+
+    print(covLunMar)
+    print(covLunMer)
+    print(covLunGio)
+    print(covLunVen)
+    print(covLunSab)
+    print(covLunDom)
+
+    print(covMarMer)
+    print(covMarGio)
+    print(covMarVen)
+    print(covMarSab)
+    print(covMarDom)
+
+    print(covMerGio)
+    print(covMerVen)
+    print(covMerSab)
+    print(covMerDom)
+
+    print(covGioVen)
+    print(covGioSab)
+    print(covGioDom)
+
+    print(covVenSab)
+    print(covVenDom)
+
+    print(covSabDom)
+
+    print(correlazione(lunedi,martedi))
+    print(correlazione(martedi,mercoledi))
+    print(correlazione(mercoledi,giovedi))
+    print(correlazione(giovedi,venerdi))
+    print(correlazione(venerdi,sabato))
+    print(correlazione(sabato,domenica))
+    
+    
